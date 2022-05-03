@@ -1,5 +1,15 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h2>{{almacen.state.tituloPrincipal}}</h2>
   </div>
 </template>
+
+<script setup>
+//Importacion de dependencias
+import {useStore} from "vuex";
+
+//Cargar el Store
+const almacen = useStore();
+
+</script>
+
