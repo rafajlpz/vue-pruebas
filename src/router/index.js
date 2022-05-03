@@ -22,6 +22,14 @@ const routes = [
     component: function () {
       return import( '../views/Contacto.vue')
     }
+  },
+  {
+    path: '/galeria',
+    name: 'galeria',
+    
+    component: function () {
+      return import( '../views/GaleriaView.vue')
+    }
   }
 ]
 
