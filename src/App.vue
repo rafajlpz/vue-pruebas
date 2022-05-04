@@ -1,32 +1,35 @@
 <template>
-  <nav>
-    <router-link to="/home">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="contacto">Contacto</router-link> |
-    <router-link to="/galeria"> Galeria</router-link>
-  </nav>
+  <the-menu></the-menu>
   <router-view/>
+  <footer>SFSAFAS</footer>
 </template>
 
+<script setup>
+//Dependencias
+import TheMenu from './components/TheMenu.vue'
+
+</script>
+
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+body{
+margin: 0;
+padding: 0;
 }
 
-nav {
-  padding: 30px;
+#app {
+  
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  background-color: white;
+ 
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+
 }
 </style>
