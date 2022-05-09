@@ -9,37 +9,11 @@
 </template>
 
 <script setup>
-
+require("@/assets/scss/TheMenu.scss");
 </script>
 
-<style scoped lang="scss">
-.main-menu{
-    background-color: #0371b3;
-    .router-link-exact-active{
-        background-color: #f8690d;
-        text-shadow: 0 1px 0 white;
-    }
-    a{
-        display:block;
-        padding: .5em;
-        text-decoration: none;
-        color: white;
-        &:hover{
-            background-color: #0a4f7f;
-            border-color:#0a4f7f ;
-        }
-    }
-    @media (min-width: 600px) {
-        &{
-            display: flex;
-            a{
-                width: 25%;
-               
-                text-align: center;
-            }
-        }
-    }
-}
+<style>
+
 
 
 

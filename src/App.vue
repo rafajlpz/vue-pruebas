@@ -13,6 +13,4 @@ require("@/assets/scss/_reset.scss");
 require("@/assets/scss/estructura.scss");
 </script>
 
-<style lang="scss">
 
-</style>
