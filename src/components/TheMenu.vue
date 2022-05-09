@@ -3,7 +3,9 @@
     <router-link to="/home">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="contacto">Contacto</router-link> |
-    <router-link to="/galeria"> Galeria</router-link>
+    <router-link to="/galeria"> Galeria</router-link> |
+    <router-link to="/especies"> Especies</router-link> |
+
   </nav>
   
 </template>

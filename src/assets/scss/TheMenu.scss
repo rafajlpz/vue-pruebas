@@ -20,8 +20,10 @@
         &{
             display: flex;
             a{
-                width: 25%;
-               
+                flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: auto;
+
                 text-align: center;
             }
         }

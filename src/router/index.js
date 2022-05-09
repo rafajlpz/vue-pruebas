@@ -30,7 +30,16 @@ const routes = [
     component: function () {
       return import( '../views/GaleriaView.vue')
     }
+  },
+  {
+    path: '/especies',
+    name: 'Especies',
+    
+    component: function () {
+      return import( '../views/EspeciesView.vue')
+    }
   }
+
 ]
 
 const router = createRouter({
