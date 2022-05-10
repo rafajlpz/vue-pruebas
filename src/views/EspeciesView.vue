@@ -15,8 +15,12 @@
 <script setup>
 // const respuesta = fetch('');
 // console.log(respuesta);
+import kolors from "../assets/colores.json"; 
+
+console.log(kolors);
+
 const titulo = "Listado de especies";
-const colores = ["azul", "verde", "naranja"];
+const colores = kolors.pepe;
 
 const leerDatos = async () => {
   const response = await fetch(
