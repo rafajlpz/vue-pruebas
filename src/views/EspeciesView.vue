@@ -1,35 +1,36 @@
 <template>
-  <div class="container">
-    <h1 class="titulo">{{ titulo }}</h1>
-    <select>
-        <option v-for="item in colores" :key="item" v-bind:value="item">{{item}}</option>
-        
-        <ol v-if="colores.length>0">
-      <li v-for="valor in colores" :key="valor">{{ valor }}</li>
-    
-    </ol>
+  <div class="container" >
+   <h1 class="titulo">{{ titulo }}</h1>
+    <select name="colores" id="colores">
+      <option v-for="(valor,indice) in data.colores" :key="indice" :value="valor">
+        {{ valor }}
+      </option>
+      
     </select>
+    <p>{{data.nombre}}</p>
   </div>
 </template>
 
 <script setup>
-// const respuesta = fetch('');
-// console.log(respuesta);
-import kolors from "../assets/colores.json"; 
+//Importamos libreria para hacerlo reactiva
+import { ref } from "vue";
 
-console.log(kolors);
+//Declaramos variables globales
+let data = ref({}); //No tiene que ser nulo para que de error, a no ser que el error incial no sea nulo, el mismo tipo de dato.
 
-const titulo = "Listado de especies";
-const colores = kolors.pepe;
-
-const leerDatos = async () => {
-  const response = await fetch(
-    "https://altas-senlleiras-default-rtdb.europe-west1.firebasedatabase.app/species.json"
-  );
-  const data = await response.json();
-  console.log(data);
+//Utilizar promesa para obtencion de datos
+const obtenerDatos = async () => {
+  try {
+    const response = await fetch(
+      "https://raw.githubusercontent.com/rafajlpz/lectura-json/main/colores.json"
+    );
+    data.value = await response.json();
+    //console.log(data.value);
+  } catch (error) {
+    console.log(`${error}`);
+  }
 };
-leerDatos();
+obtenerDatos();
 </script>
 
 <style>
